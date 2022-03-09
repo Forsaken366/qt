@@ -1,0 +1,36 @@
+QWidget#tab[objectName="tab_machine"]{
+    background-color:#00ff00;
+    border:1px solid #eeeeee;
+}
+
+QTabWidget#tabWidget{
+    background-color:rgb(0,0,0);
+    border:0px;
+}
+
+QTabWidget::pane{
+    top:-1px;
+}
+
+QTabBar::tab{
+    background-color:rgb(0,0,0);
+    color:white;
+    font:'宋体';
+}
+
+QTabBar::tab::selected{
+    background-color:rgb(0,128,238);
+    font:'宋体';
+}
+
+QWidget{
+    background-color:#000000;
+    color:white;
+    font:'宋体';
+}
+
+QPushButton#ChangeNetwork{
+    background-color:rgb(54,65,83);
+    color:white;
+    font:'宋体'
+}
