@@ -27,15 +27,30 @@ CONFIG += c++11
 SOURCES += \
         main.cpp \
         mainwindow.cpp \
-    pagefile.cpp
+    pagefile.cpp \
+    antenna.cpp \
+    antenna2.cpp \
+    peripheraloverview.cpp \
+    peripheralport.cpp \
+    guiinstrumentlog.cpp
 
 HEADERS += \
         mainwindow.h \
-    pagefile.h
+    pagefile.h \
+    antenna.h \
+    antenna2.h \
+    peripheraloverview.h \
+    peripheralport.h \
+    guiinstrumentlog.h
 
 FORMS += \
         mainwindow.ui \
-    pagefile.ui
+    pagefile.ui \
+    antenna.ui \
+    antenna2.ui \
+    peripheraloverview.ui \
+    peripheralport.ui \
+    guiinstrumentlog.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin

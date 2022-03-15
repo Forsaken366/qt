@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>Antenna</class>
- <widget class="QWidget" name="Antenna">
+ <class>PeripheralOverview</class>
+ <widget class="QWidget" name="PeripheralOverview">
   <property name="geometry">
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>755</width>
-    <height>552</height>
+    <width>915</width>
+    <height>618</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>Form</string>
   </property>
-  <layout class="QVBoxLayout" name="verticalLayout_3">
+  <layout class="QVBoxLayout" name="verticalLayout">
    <property name="spacing">
     <number>0</number>
    </property>
@@ -64,199 +64,6 @@
     </widget>
    </item>
    <item>
-    <widget class="QWidget" name="status" native="true">
-     <property name="minimumSize">
-      <size>
-       <width>0</width>
-       <height>80</height>
-      </size>
-     </property>
-     <property name="maximumSize">
-      <size>
-       <width>16777215</width>
-       <height>80</height>
-      </size>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">QWidget{
-	background-color:rgb(13, 16, 19);
-	color:white;
-}</string>
-     </property>
-     <layout class="QVBoxLayout" name="verticalLayout">
-      <property name="spacing">
-       <number>0</number>
-      </property>
-      <property name="leftMargin">
-       <number>0</number>
-      </property>
-      <property name="topMargin">
-       <number>0</number>
-      </property>
-      <property name="rightMargin">
-       <number>0</number>
-      </property>
-      <property name="bottomMargin">
-       <number>0</number>
-      </property>
-      <item>
-       <widget class="QWidget" name="widget_2" native="true">
-        <layout class="QHBoxLayout" name="horizontalLayout_2">
-         <property name="spacing">
-          <number>0</number>
-         </property>
-         <property name="leftMargin">
-          <number>0</number>
-         </property>
-         <property name="topMargin">
-          <number>0</number>
-         </property>
-         <property name="rightMargin">
-          <number>0</number>
-         </property>
-         <property name="bottomMargin">
-          <number>0</number>
-         </property>
-         <item>
-          <widget class="QLabel" name="label_3">
-           <property name="minimumSize">
-            <size>
-             <width>32</width>
-             <height>32</height>
-            </size>
-           </property>
-           <property name="maximumSize">
-            <size>
-             <width>32</width>
-             <height>32</height>
-            </size>
-           </property>
-           <property name="styleSheet">
-            <string notr="true">QLabel{
-	background-image:url(:/image/icon/progress.png);
-	background-repeat:no-repeat;
-	background-position:center;
-}</string>
-           </property>
-           <property name="text">
-            <string>1</string>
-           </property>
-           <property name="alignment">
-            <set>Qt::AlignCenter</set>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="Line" name="line">
-           <property name="minimumSize">
-            <size>
-             <width>0</width>
-             <height>1</height>
-            </size>
-           </property>
-           <property name="maximumSize">
-            <size>
-             <width>16777215</width>
-             <height>1</height>
-            </size>
-           </property>
-           <property name="styleSheet">
-            <string notr="true">QWidget{
-	background-color:rgb(1, 105, 180);
-	background-position:center;
-}</string>
-           </property>
-           <property name="orientation">
-            <enum>Qt::Horizontal</enum>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QLabel" name="step2">
-           <property name="minimumSize">
-            <size>
-             <width>32</width>
-             <height>32</height>
-            </size>
-           </property>
-           <property name="maximumSize">
-            <size>
-             <width>32</width>
-             <height>32</height>
-            </size>
-           </property>
-           <property name="styleSheet">
-            <string notr="true">QLabel{
-	background-image:url(:/image/icon/unprogress.png);
-	background-repeat:no-repeat;
-	background-position:center;
-}</string>
-           </property>
-           <property name="text">
-            <string>2</string>
-           </property>
-           <property name="alignment">
-            <set>Qt::AlignCenter</set>
-           </property>
-          </widget>
-         </item>
-        </layout>
-       </widget>
-      </item>
-      <item>
-       <widget class="QWidget" name="widget_3" native="true">
-        <property name="minimumSize">
-         <size>
-          <width>0</width>
-          <height>20</height>
-         </size>
-        </property>
-        <property name="maximumSize">
-         <size>
-          <width>16777215</width>
-          <height>20</height>
-         </size>
-        </property>
-        <layout class="QHBoxLayout" name="horizontalLayout">
-         <property name="spacing">
-          <number>0</number>
-         </property>
-         <property name="leftMargin">
-          <number>0</number>
-         </property>
-         <property name="topMargin">
-          <number>0</number>
-         </property>
-         <property name="rightMargin">
-          <number>0</number>
-         </property>
-         <property name="bottomMargin">
-          <number>0</number>
-         </property>
-         <item>
-          <widget class="QLabel" name="label">
-           <property name="text">
-            <string>模块选择</string>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QLabel" name="label_2">
-           <property name="text">
-            <string>配置</string>
-           </property>
-           <property name="alignment">
-            <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-           </property>
-          </widget>
-         </item>
-        </layout>
-       </widget>
-      </item>
-     </layout>
-    </widget>
-   </item>
-   <item>
     <widget class="QWidget" name="childwindow" native="true">
      <property name="styleSheet">
       <string notr="true">QWidget{
@@ -298,8 +105,14 @@
          <property name="spacing">
           <number>0</number>
          </property>
+         <property name="leftMargin">
+          <number>9</number>
+         </property>
          <property name="topMargin">
           <number>0</number>
+         </property>
+         <property name="rightMargin">
+          <number>9</number>
          </property>
          <property name="bottomMargin">
           <number>0</number>
@@ -307,7 +120,7 @@
          <item>
           <widget class="QLabel" name="name">
            <property name="sizePolicy">
-            <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+            <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
              <horstretch>4</horstretch>
              <verstretch>0</verstretch>
             </sizepolicy>
@@ -323,9 +136,9 @@
           </widget>
          </item>
          <item>
-          <widget class="QLabel" name="anttype">
+          <widget class="QLabel" name="type">
            <property name="sizePolicy">
-            <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+            <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
              <horstretch>1</horstretch>
              <verstretch>0</verstretch>
             </sizepolicy>
@@ -336,14 +149,14 @@
 }</string>
            </property>
            <property name="text">
-            <string>Ant.Type</string>
+            <string>Type</string>
            </property>
           </widget>
          </item>
          <item>
-          <widget class="QLabel" name="usedbegin">
+          <widget class="QLabel" name="version">
            <property name="sizePolicy">
-            <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+            <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
              <horstretch>1</horstretch>
              <verstretch>0</verstretch>
             </sizepolicy>
@@ -354,14 +167,14 @@
 }</string>
            </property>
            <property name="text">
-            <string>Used Begin</string>
+            <string>Version</string>
            </property>
           </widget>
          </item>
          <item>
-          <widget class="QLabel" name="usedend">
+          <widget class="QLabel" name="port">
            <property name="sizePolicy">
-            <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+            <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
              <horstretch>1</horstretch>
              <verstretch>0</verstretch>
             </sizepolicy>
@@ -372,7 +185,25 @@
 }</string>
            </property>
            <property name="text">
-            <string>Used End</string>
+            <string>Port</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="status">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+             <horstretch>1</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QLabel{
+	font: 10pt &quot;微软雅黑&quot;;
+}</string>
+           </property>
+           <property name="text">
+            <string>Status</string>
            </property>
           </widget>
          </item>
@@ -397,8 +228,8 @@
           <rect>
            <x>0</x>
            <y>0</y>
-           <width>753</width>
-           <height>370</height>
+           <width>913</width>
+           <height>516</height>
           </rect>
          </property>
         </widget>
@@ -408,20 +239,8 @@
     </widget>
    </item>
    <item>
-    <widget class="QWidget" name="widget" native="true">
-     <property name="minimumSize">
-      <size>
-       <width>0</width>
-       <height>40</height>
-      </size>
-     </property>
-     <property name="maximumSize">
-      <size>
-       <width>16777215</width>
-       <height>40</height>
-      </size>
-     </property>
-     <layout class="QHBoxLayout" name="horizontalLayout_3">
+    <widget class="QWidget" name="widget_4" native="true">
+     <layout class="QHBoxLayout" name="horizontalLayout_2">
       <property name="spacing">
        <number>0</number>
       </property>
@@ -438,16 +257,10 @@
        <number>0</number>
       </property>
       <item>
-       <widget class="QPushButton" name="add">
+       <widget class="QPushButton" name="refresh">
         <property name="minimumSize">
          <size>
           <width>0</width>
-          <height>40</height>
-         </size>
-        </property>
-        <property name="maximumSize">
-         <size>
-          <width>16777215</width>
           <height>40</height>
          </size>
         </property>
@@ -458,110 +271,7 @@
          <string notr="true">QPushButton{
 	background-color:rgb(50, 63, 72);
 	font: 14pt &quot;微软雅黑&quot;;
-	background-image:url(:/image/icon/triangle2.png);
-	background-repeat:no-repeat;
-	background-position:bottom right;
 
-}
-QPushButton:!enabled{
-	background-color:rgb(77, 77, 77);
-	font: 14pt &quot;微软雅黑&quot;;
-}</string>
-        </property>
-        <property name="text">
-         <string>添加</string>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QPushButton" name="edit">
-        <property name="minimumSize">
-         <size>
-          <width>0</width>
-          <height>40</height>
-         </size>
-        </property>
-        <property name="maximumSize">
-         <size>
-          <width>16777215</width>
-          <height>40</height>
-         </size>
-        </property>
-        <property name="focusPolicy">
-         <enum>Qt::NoFocus</enum>
-        </property>
-        <property name="styleSheet">
-         <string notr="true">QPushButton{
-	background-color:rgb(50, 63, 72);
-	font: 14pt &quot;微软雅黑&quot;;
-	background-image:url(:/image/icon/triangle2.png);
-	background-repeat:no-repeat;
-	background-position:bottom right;
-
-}
-QPushButton:!enabled{
-	background-color:rgb(77, 77, 77);
-	font: 14pt &quot;微软雅黑&quot;;
-}</string>
-        </property>
-        <property name="text">
-         <string>编辑</string>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QPushButton" name="remove">
-        <property name="minimumSize">
-         <size>
-          <width>0</width>
-          <height>40</height>
-         </size>
-        </property>
-        <property name="maximumSize">
-         <size>
-          <width>16777215</width>
-          <height>40</height>
-         </size>
-        </property>
-        <property name="focusPolicy">
-         <enum>Qt::NoFocus</enum>
-        </property>
-        <property name="styleSheet">
-         <string notr="true">QPushButton{
-	background-color:rgb(50, 63, 72);
-	font: 14pt &quot;微软雅黑&quot;;
-}
-QPushButton:!enabled{
-	background-color:rgb(77, 77, 77);
-	font: 14pt &quot;微软雅黑&quot;;
-}</string>
-        </property>
-        <property name="text">
-         <string>移除</string>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QPushButton" name="reflesh">
-        <property name="minimumSize">
-         <size>
-          <width>0</width>
-          <height>40</height>
-         </size>
-        </property>
-        <property name="maximumSize">
-         <size>
-          <width>16777215</width>
-          <height>40</height>
-         </size>
-        </property>
-        <property name="focusPolicy">
-         <enum>Qt::NoFocus</enum>
-        </property>
-        <property name="styleSheet">
-         <string notr="true">QPushButton{
-	background-color:rgb(50, 63, 72);
-	font: 14pt &quot;微软雅黑&quot;;
 }
 QPushButton:!enabled{
 	background-color:rgb(77, 77, 77);
@@ -574,16 +284,10 @@ QPushButton:!enabled{
        </widget>
       </item>
       <item>
-       <widget class="QPushButton" name="block">
+       <widget class="QPushButton" name="button1">
         <property name="minimumSize">
          <size>
           <width>0</width>
-          <height>40</height>
-         </size>
-        </property>
-        <property name="maximumSize">
-         <size>
-          <width>16777215</width>
           <height>40</height>
          </size>
         </property>
@@ -594,6 +298,88 @@ QPushButton:!enabled{
          <string notr="true">QPushButton{
 	background-color:rgb(50, 63, 72);
 	font: 14pt &quot;微软雅黑&quot;;
+
+}
+QPushButton:!enabled{
+	background-color:rgb(77, 77, 77);
+	font: 14pt &quot;微软雅黑&quot;;
+}</string>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="button2">
+        <property name="minimumSize">
+         <size>
+          <width>0</width>
+          <height>40</height>
+         </size>
+        </property>
+        <property name="focusPolicy">
+         <enum>Qt::NoFocus</enum>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QPushButton{
+	background-color:rgb(50, 63, 72);
+	font: 14pt &quot;微软雅黑&quot;;
+
+}
+QPushButton:!enabled{
+	background-color:rgb(77, 77, 77);
+	font: 14pt &quot;微软雅黑&quot;;
+}</string>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="button3">
+        <property name="minimumSize">
+         <size>
+          <width>0</width>
+          <height>40</height>
+         </size>
+        </property>
+        <property name="focusPolicy">
+         <enum>Qt::NoFocus</enum>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QPushButton{
+	background-color:rgb(50, 63, 72);
+	font: 14pt &quot;微软雅黑&quot;;
+
+}
+QPushButton:!enabled{
+	background-color:rgb(77, 77, 77);
+	font: 14pt &quot;微软雅黑&quot;;
+}</string>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="button4">
+        <property name="minimumSize">
+         <size>
+          <width>0</width>
+          <height>40</height>
+         </size>
+        </property>
+        <property name="focusPolicy">
+         <enum>Qt::NoFocus</enum>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QPushButton{
+	background-color:rgb(50, 63, 72);
+	font: 14pt &quot;微软雅黑&quot;;
+
 }
 QPushButton:!enabled{
 	background-color:rgb(77, 77, 77);
@@ -610,12 +396,6 @@ QPushButton:!enabled{
         <property name="minimumSize">
          <size>
           <width>0</width>
-          <height>40</height>
-         </size>
-        </property>
-        <property name="maximumSize">
-         <size>
-          <width>16777215</width>
           <height>40</height>
          </size>
         </property>

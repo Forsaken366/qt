@@ -321,7 +321,7 @@ void PageFile::on_quit_clicked()
     }else{
         //发出退出信号 退回设置主页面
         emit quit();
-        qDebug() << "返回设置主页面";
+        //qDebug() << "返回设置主页面";
     }
 }
 
@@ -415,9 +415,6 @@ void PageFile::keyPressEvent(QKeyEvent *event)
             this->num_folder = folders.length();
             this->info_folder = folders;
             this->folder_directed = 0;
-
-            //设置滚动页面大小
-            ui->files->setMinimumHeight(folders.length() * 40 + 10);
             for(int i = 0;i < folders.length(); i++){
                 //勾选项
                 QCheckBox *checked_folder = new QCheckBox ();
@@ -473,6 +470,8 @@ void PageFile::keyPressEvent(QKeyEvent *event)
             //滚动页面应用布局
             ui->files->setLayout(pLayout);
             ui->files->layout()->setContentsMargins(0, 0, 0, 0);
+            //设置滚动页面大小
+            ui->files->setMinimumHeight(folders.length() * 40);
             //页面记录++
             page_status++;
             break;
@@ -543,7 +542,7 @@ void PageFile::keyPressEvent(QKeyEvent *event)
                 if((this->folder_directed - 1) * 40 < 0){
                     ui->pathprefix->verticalScrollBar()->setSliderPosition(0);
                 }else
-                    ui->pathprefix->verticalScrollBar()->setSliderPosition((this->folder_directed - 5) * 40);
+                    ui->pathprefix->verticalScrollBar()->setSliderPosition((this->folder_directed - 3) * 40);
             }
             break;
         }
@@ -610,7 +609,7 @@ void PageFile::keyPressEvent(QKeyEvent *event)
                 if((this->folder_directed - 1) * 40 < 0){
                     ui->pathprefix->verticalScrollBar()->setSliderPosition(0);
                 }else
-                    ui->pathprefix->verticalScrollBar()->setSliderPosition((this->folder_directed - 5) * 40);
+                    ui->pathprefix->verticalScrollBar()->setSliderPosition((this->folder_directed - 3) * 40);
             }
             break;
         }

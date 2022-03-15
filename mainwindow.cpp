@@ -15,6 +15,9 @@ MainWindow::MainWindow(QWidget *parent) :
     ui->setupUi(this);
     //初始化变量
     this->isopend_pagefile = false;
+    this->isopend_antenna = false;
+    this->isopend_periview = false;
+    this->isopend_periport = false;
 
     //应用样式 apply the qss style
     QFile file(":/qss/main.qss");
@@ -46,7 +49,6 @@ MainWindow::MainWindow(QWidget *parent) :
     ui->tabWidget->setTabEnabled(4, false);
     //文件页面实例化
     pagefile = new PageFile(this);
-
     //信号连接 回到主设置页面
     connect(pagefile, SIGNAL(quit()), this, SLOT(BackToMainWindow()));
 }
@@ -226,6 +228,7 @@ void MainWindow::on_tabWidget_tabBarClicked(int index)
 
 //返回主页面
 void MainWindow::BackToMainWindow(){
+    //文件页
     if(this->isopend_pagefile){
         //重新显示标签页
         ui->tabWidget->show();
@@ -236,6 +239,34 @@ void MainWindow::BackToMainWindow(){
         this->isopend_pagefile = false;
         //设置页重新设置为初始页即“仪表配置页”
         ui->tabWidget->setCurrentIndex(0);
+    }//天线列表页
+    else if (this->isopend_antenna) {
+        //重新显示标签页
+        ui->tabWidget->show();
+        //隐藏 天线列表 页
+        antenna->hide();
+        //改变参数
+        antenna->setFocusPolicy(Qt::NoFocus);
+        this->isopend_antenna = false;
+
+    }//外设概览页
+    else if (this->isopend_periview) {
+        //重新显示标签页
+        ui->tabWidget->show();
+        //隐藏 天线列表 页
+        periview->hide();
+        //改变参数
+        periview->setFocusPolicy(Qt::NoFocus);
+        this->isopend_periview = false;
+    }//Gui和仪表日至
+    else if (this->isopend_guilog){
+        //重新显示标签页
+        ui->tabWidget->show();
+        //隐藏 Gui和仪表日志 页
+        guilog->hide();
+        //改变参数
+        guilog->setFocusPolicy(Qt::NoFocus);
+        this->isopend_guilog = false;
     }
 }
 
@@ -244,4 +275,60 @@ void MainWindow::on_antennalist_clicked()
 {
     // 把tabWidget设置为隐藏
     ui->tabWidget->hide();
+    // 实例化天线
+    antenna = new Antenna(this);
+    // 添加控件
+    ui->centralWidget->layout()->addWidget(antenna);
+    // 设置焦点
+    antenna->setFocus();
+    // 变量设置
+    this->isopend_antenna = true;
+    //连接返回主页面
+    connect(antenna, SIGNAL(quit()), this, SLOT(BackToMainWindow()));
+}
+
+//打开外设概览
+void MainWindow::on_periview_clicked()
+{
+    // 把tabWidget设置为隐藏
+    ui->tabWidget->hide();
+    // 实例化 外设概览
+    periview = new PeripheralOverview(this);
+    // 添加控件
+    ui->centralWidget->layout()->addWidget(periview);
+
+    // 设置焦点
+    periview->setFocus();
+
+    // 变量设置
+    this->isopend_periview = true;
+
+    //连接返回主页面
+    connect(periview, SIGNAL(quit()), this, SLOT(BackToMainWindow()));
+}
+
+//打开外设接口对话框
+void MainWindow::on_periport_clicked()
+{
+    // 实例化 外设概览
+    periport = new PeripheralPort(this);
+    // 模态对话框
+    periport->exec();
+}
+
+//显示概览 Gui和仪表日志
+void MainWindow::on_showGuiInstrulog_clicked()
+{
+    // 把tabWidget设置为隐藏
+    ui->tabWidget->hide();
+    // 实例化
+    guilog =  new GUIInstrumentLog(this);
+    // 添加控件
+    ui->centralWidget->layout()->addWidget(guilog);
+    // 设置焦点
+    guilog->setFocus();
+    // 变量设置
+    this->isopend_guilog = true;
+    // 连接返回主页面
+    connect(guilog, SIGNAL(quit()), this, SLOT(BackToMainWindow()));
 }
